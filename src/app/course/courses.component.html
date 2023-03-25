@@ -1,0 +1,77 @@
+<h3>Courses List</h3>
+<h5>{{ Today | date : "d/M/y" }}</h5>
+<!-- <div class="table-responsive">
+  <table class="table table-bordered">
+    <tr>
+      <th>Name</th>
+      <th>Duration</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let course of courses">
+      <td>{{ course.name }}</td>
+      <td>{{ course.duration }}</td>
+      <td>{{ course.description }}</td>
+      <td>
+        <div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-id="{{ course.courseId }}"
+            routerLink="editCourse"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-id="{{ course.courseId }}"
+            routerLink="deleteCourse"
+            style="margin-left: 7px;"
+          >
+            Delete
+          </button>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div> -->
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Description</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courses">
+        <td>{{course.name}}</td>
+        <td>{{course.duration}}</td>
+        <td>{{course.description}}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-id="{{ course.courseId }}"
+            routerLink="editCourse"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-id="{{ course.courseId }}"
+            routerLink="deleteCourse"
+            style="margin-left: 7px;"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
