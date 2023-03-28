@@ -1,7 +1,6 @@
 export interface Course {
-    courseId: Number;
-    name:String;
-    duration:String;
-    description:String;
+  courseId: number;
+  name: String;
+  duration: String;
+  description: String;
 }
-
