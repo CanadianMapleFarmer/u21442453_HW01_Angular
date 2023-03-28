@@ -1,0 +1,55 @@
+<h3>Edit Course</h3>
+<h5>{{ Today | date : "d/M/y" }}</h5>
+<hr />
+<div class="course-form">
+  <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+    <div class="row-cols-2" style="padding-left: 20px">
+      <div class="row form-group">
+        <label for="Name" style="padding-left: 0px">Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="name"
+          [value]="course.name"
+        />
+      </div>
+      <div class="row form-group">
+        <label for="Duration" style="padding-left: 0px">Duration:</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="duration"
+          [value]="course.duration"
+        />
+      </div>
+      <div class="row form-group">
+        <label for="Description" style="padding-left: 0px">Description:</label>
+        <textarea
+          class="form-control"
+          name="Description"
+          formControlName="description"
+          [value]="course.description"
+        ></textarea>
+      </div>
+      <div class="row form-group" style="padding-top: 15px">
+        <div class="col" style="padding-left: 0px">
+          <button
+            type="submit"
+            class="btn btn-success"
+            [disabled]="courseForm.invalid"
+          >
+            Submit
+          </button>
+          <button
+            type="button"
+            class="btn btn-warning"
+            style="margin-left: 5px"
+            routerLink=""
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
